@@ -1,174 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project SENNEX | Aladdin Protocol</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-        .container {
-            max-width: 600px;
-            padding: 20px;
-        }
-        h1 {
-            color: #58a6ff;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            color: #8b949e;
-        }
-        .badge {
-            background-color: #21262d;
-            border: 1px solid #30363d;
-            padding: 8px 16px;
-            border-radius: 20px;
-            display: inline-block;
-            font-size: 0.9rem;
-            color: #58a6ff;
-            margin-bottom: 20px;
-        }
-        .footer {
-            margin-top: 40px;
-            font-size: 0.85rem;
-            color: #484f58;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="badge">System Status: Active</div>
-        <h1>Project SENNEX</h1>
-        <p>Developing the Aladdin Asi Protocol for Next-Generation Decentralized Intelligence Infrastructure.</p>
-        <div class="footer">
-            &copy; 2026 Project SENNEX. All Rights Reserved.
-        </div>
-    </div>
-</body>
-</HTM<!DOCTYPE html>
+    <meta charset="UTF-8"><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project SENNEX | Advanced Intelligence</title>
+    <title>SENNEX | Quantum Intelligence Network</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #050505;
-            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #030712;
+            color: #10b981;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            padding: 20px;
             overflow: hidden;
         }
-        .matrix-bg {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at center, #0a1128 0%, #050505 100%);
-            z-index: 1;
+        .terminal-box {
+            width: 100%;
+            max-width: 800px;
+            background: #090d16;
+            border: 1px solid #065f46;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.2);
+            overflow: hidden;
         }
-        .container {
-            position: relative;
-            z-index: 2;
-            max-width: 700px;
-            padding: 40px;
-            text-align: center;
-            border: 1px solid #1f2937;
-            border-radius: 16px;
-            background: rgba(13, 17, 23, 0.8);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        .terminal-header {
+            background: #111827;
+            padding: 10px 20px;
+            border-bottom: 1px solid #1f2937;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        .status-badge {
-            background: rgba(56, 189, 248, 0.1);
-            border: 1px solid #0ea5e9;
-            color: #38bdf8;
-            padding: 6px 16px;
-            border-radius: 9999px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            display: inline-block;
-            margin-bottom: 24px;
-        }
-        h1 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            margin-bottom: 16px;
-            background: linear-gradient(to right, #ffffff, #9ca3af);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        p {
-            font-size: 1.15rem;
-            line-height: 1.75;
+        .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+        .dot-red { background: #ef4444; }
+        .dot-yellow { background: #f59e0b; }
+        .dot-green { background: #10b981; }
+        .terminal-title {
             color: #9ca3af;
-            margin-bottom: 32px;
+            font-size: 0.85rem;
+            margin-left: auto;
+            font-weight: bold;
+            letter-spacing: 1px;
         }
-        .grid-info {
+        .terminal-body {
+            padding: 25px;
+            min-height: 350px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .accent-text { color: #38bdf8; }
+        .warning-text { color: #fbbf24; }
+        .cmd-line { margin-bottom: 12px; display: none; }
+        .blink { animation: blinker 1s linear infinite; }
+        @keyframes blinker { 50% { opacity: 0; } }
+        
+        .grid-stats {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-top: 20px;
-            text-align: left;
-        }
-        .card {
-            background: #0d1117;
-            border: 1px solid #30363d;
-            padding: 16px;
-            border-radius: 8px;
-        }
-        .card h3 { color: #58a6ff; font-size: 1rem; margin-bottom: 6px; }
-        .card p { font-size: 0.9rem; margin: 0; color: #8b949e; }
-        .footer {
-            margin-top: 40px;
-            font-size: 0.8rem;
-            color: #4b5563;
-            border-top: 1px solid #1f2937;
+            gap: 15px;
+            margin-top: 25px;
+            border-top: 1px dashed #065f46;
             padding-top: 20px;
         }
+        .stat-card {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        .stat-card h3 { color: #f3f4f6; font-size: 1.1rem; margin-bottom: 5px; }
     </style>
 </head>
 <body>
-    <div class="matrix-bg"></div>
-    <div class="container">
-        <div class="status-badge">🟢 System Operational: Active</div>
-        <h1>Project SENNEX</h1>
-        <p>Architecting next-generation decentralized intelligence infrastructure and high-performance neural computing frameworks.</p>
-        
-        <div class="grid-info">
-            <div class="card">
-                <h3>Core Framework</h3>
-                <p>Aladdin Protocol</p>
-            </div>
-            <div class="card">
-                <h3>Deployment</h3>
-                <p>Global / Remote Nodes</p>
-            </div>
-        </div>
 
-        <div class="footer">
-            &copy; 2026 Project SENNEX. Authority of Chief Architect.
+    <div class="terminal-box">
+        <div class="terminal-header">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <div class="terminal-title">SENNEX_CORE_AUTH</div>
+        </div>
+        <div class="terminal-body">
+            <div class="cmd-line" id="line1">> INITIALIZING PROJECT SENNEX CORE SYSTEM...</div>
+            <div class="cmd-line" id="line2">> LOADING DECENTRALIZED INTELLIGENCE NETWORK... <span class="accent-text">[OK]</span></div>
+            <div class="cmd-line" id="line3">> DEPLOYING ALADDIN PROTOCOL FRAMEWORK... <span class="accent-text">[ONLINE]</span></div>
+            <div class="cmd-line" id="line4">> STATUS: <span class="warning-text">NODE OPERATIONAL / SECURITY LEVEL ULTRA</span></div>
+            
+            <div class="cmd-line" id="line5">
+                <h1 style="color: #ffffff; font-size: 2.2rem; margin: 15px 0 5px 0;">PROJECT SENNEX</h1>
+                <p style="color: #9ca3af; font-size: 1.1rem;">Next-Generation Neural Architecture for Autonomous Super-Intelligence Infrastructure.</p>
+            </div>
+
+            <div class="grid-stats cmd-line" id="line6">
+                <div class="stat-card">
+                    <h3>Core Engine</h3>
+                    <p class="accent-text">Aladdin Protocol v1.0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Network Scope</h3>
+                    <p class="accent-text">Global / Remote Compute</p>
+                </div>
+            </div>
+            
+            <div class="cmd-line" id="line7" style="margin-top: 30px; font-size: 0.8rem; color: #4b5563;">
+                © 2026 PROJECT SENNEX. AUTHORIZATION APPROVED BY CHIEF ARCHITECT. <span class="blink">_</span>
+            </div>
         </div>
     </div>
+
+    <script>
+        // Animating the terminal rows one by one for heavy powerful tech effect
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(() => { document.getElementById('line1').style.display = 'block'; }, 200);
+            setTimeout(() => { document.getElementById('line2').style.display = 'block'; }, 800);
+            setTimeout(() => { document.getElementById('line3').style.display = 'block'; }, 1400);
+            setTimeout(() => { document.getElementById('line4').style.display = 'block'; }, 1900);
+            setTimeout(() => { document.getElementById('line5').style.display = 'block'; }, 2400);
+            setTimeout(() => { document.getElementById('line6').style.display = 'grid'; }, 2800);
+            setTimeout(() => { document.getElementById('line7').style.display = 'block'; }, 3200);
+        });
+    </script>
 </body>
 </html>
-
+a
