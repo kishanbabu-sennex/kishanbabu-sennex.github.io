@@ -6,122 +6,118 @@
     <title>SENNEX | Quantum Intelligence Network</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project SENNEX | Decentralized Intelligence Layer</title>
+    <style>
         body {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #030712;
-            color: #10b981;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-            overflow: hidden;
-        }
-        .terminal-box {
-            width: 100%;
-            max-width: 800px;
-            background: #090d16;
-            border: 1px solid #065f46;
-            border-radius: 8px;
-            box-shadow: 0 0 30px rgba(16, 185, 129, 0.2);
-            overflow: hidden;
-        }
-        .terminal-header {
-            background: #111827;
-            padding: 10px 20px;
-            border-bottom: 1px solid #1f2937;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
-        .dot-red { background: #ef4444; }
-        .dot-yellow { background: #f59e0b; }
-        .dot-green { background: #10b981; }
-        .terminal-title {
-            color: #9ca3af;
-            font-size: 0.85rem;
-            margin-left: auto;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-        .terminal-body {
-            padding: 25px;
-            min-height: 350px;
-            font-size: 1rem;
+            margin: 0;
+            padding: 0;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
             line-height: 1.6;
         }
-        .accent-text { color: #38bdf8; }
-        .warning-text { color: #fbbf24; }
-        .cmd-line { margin-bottom: 12px; display: none; }
-        .blink { animation: blinker 1s linear infinite; }
-        @keyframes blinker { 50% { opacity: 0; } }
-        
-        .grid-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 25px;
-            border-top: 1px dashed #065f46;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        h1 {
+            color: #58a6ff;
+            font-size: 2.5rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        .subtitle {
+            color: #8b949e;
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+        .architect-badge {
+            background: #238636;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        section {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #f0f6fc;
+            border-bottom: 1px dashed #30363d;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .highlight {
+            color: #ff7b72;
+            font-family: monospace;
+        }
+        footer {
+            text-align: center;
+            color: #8b949e;
+            font-size: 0.9rem;
+            margin-top: 60px;
+            border-top: 1px solid #30363d;
             padding-top: 20px;
         }
-        .stat-card {
-            background: #0f172a;
-            border: 1px solid #1e293b;
-            padding: 15px;
-            border-radius: 6px;
-        }
-        .stat-card h3 { color: #f3f4f6; font-size: 1.1rem; margin-bottom: 5px; }
     </style>
 </head>
 <body>
 
-    <div class="terminal-box">
-        <div class="terminal-header">
-            <span class="dot dot-red"></span>
-            <span class="dot dot-yellow"></span>
-            <span class="dot dot-green"></span>
-            <div class="terminal-title">SENNEX_CORE_AUTH</div>
-        </div>
-        <div class="terminal-body">
-            <div class="cmd-line" id="line1">> INITIALIZING PROJECT SENNEX CORE SYSTEM...</div>
-            <div class="cmd-line" id="line2">> LOADING DECENTRALIZED INTELLIGENCE NETWORK... <span class="accent-text">[OK]</span></div>
-            <div class="cmd-line" id="line3">> DEPLOYING ALADDIN PROTOCOL FRAMEWORK... <span class="accent-text">[ONLINE]</span></div>
-            <div class="cmd-line" id="line4">> STATUS: <span class="warning-text">NODE OPERATIONAL / SECURITY LEVEL ULTRA</span></div>
-            
-            <div class="cmd-line" id="line5">
-                <h1 style="color: #ffffff; font-size: 2.2rem; margin: 15px 0 5px 0;">PROJECT SENNEX</h1>
-                <p style="color: #9ca3af; font-size: 1.1rem;">Next-Generation Neural Architecture for Autonomous Super-Intelligence Infrastructure.</p>
-            </div>
+    <div class="container">
+        <header>
+            <h1>PROJECT SENNEX</h1>
+            <div class="subtitle">Next-Generation Decentralized Intelligence Layer & Aladdin Protocol</div>
+            <div class="architect-badge">Chief Architect: Kishan Babu</div>
+        </header>
 
-            <div class="grid-stats cmd-line" id="line6">
-                <div class="stat-card">
-                    <h3>Core Engine</h3>
-                    <p class="accent-text">Aladdin Protocol v1.0</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Network Scope</h3>
-                    <p class="accent-text">Global / Remote Compute</p>
-                </div>
-            </div>
-            
-            <div class="cmd-line" id="line7" style="margin-top: 30px; font-size: 0.8rem; color: #4b5563;">
-                © 2026 PROJECT SENNEX. AUTHORIZATION APPROVED BY CHIEF ARCHITECT. <span class="blink">_</span>
-            </div>
-        </div>
+        <section>
+            <h2>Executive Summary</h2>
+            <p>Project SENNEX is bypassing standard centralized AI bottlenecks to establish a highly optimized, low-latency decentralized execution framework. By leveraging hardware-accelerated compilers and memory-isolated kernels, we aim for 1000x communication efficiency benchmarks over legacy distributed models.</p>
+        </section>
+
+        <section>
+            <h2>Architectural Infrastructure (S1-S8 Pillars)</h2>
+            <ul>
+                <li><strong style="color: #58a6ff;">Distributed Core:</strong> Low-latency synchronization kernels and asynchronous compute graphs built natively in Rust/C++.</li>
+                <li><strong style="color: #58a6ff;">Memory Optimization:</strong> Zero-copy context streams, dynamic KV-cache recycling, and ultra-high token throughput.</li>
+                <li><strong style="color: #58a6ff;">Confidential Sandboxing:</strong> Hardware-level cryptographic isolation ensuring absolute security for systemic seed codes.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Current Status</h2>
+            <p>Infrastructure evaluations are currently active under private branches. Core systems components, including the <span class="highlight">Aladdin Protocol</span>, are undergoing benchmark alignments against elite distributed systems protocols.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Project SENNEX. Internal Infrastructure Architecture Group. All Rights Reserved.</p>
+        </footer>
     </div>
 
-    <script>
-        // Animating the terminal rows one by one for heavy powerful tech effect
-        document.addEventListener("DOMContentLoaded", function() {
-            setTimeout(() => { document.getElementById('line1').style.display = 'block'; }, 200);
-            setTimeout(() => { document.getElementById('line2').style.display = 'block'; }, 800);
-            setTimeout(() => { document.getElementById('line3').style.display = 'block'; }, 1400);
-            setTimeout(() => { document.getElementById('line4').style.display = 'block'; }, 1900);
-            setTimeout(() => { document.getElementById('line5').style.display = 'block'; }, 2400);
-            setTimeout(() => { document.getElementById('line6').style.display = 'grid'; }, 2800);
-            setTimeout(() => { document.getElementById('line7').style.display = 'block'; }, 3200);
-        });
-    </script>
 </body>
 </html>
