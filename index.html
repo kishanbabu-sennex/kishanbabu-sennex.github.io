@@ -1,5 +1,4 @@
-
-     !DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -39,13 +38,18 @@
         .architect-badge {
             background: #238636;
             color: white;
-            padding: 6px 16px;
+            padding: 8px 18px;
             border-radius: 20px;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             display: inline-block;
             margin-top: 15px;
             font-weight: bold;
             letter-spacing: 0.5px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .architect-badge:hover {
+            background: #2ea043;
         }
         section {
             background: #161b22;
@@ -101,7 +105,8 @@
         <header>
             <h1>PROJECT SENNEX</h1>
             <div class="subtitle">Next-Generation Decentralized Intelligence Layer & Aladdin Protocol</div>
-            <div class="architect-badge">Chief Architect: Kishan Babu</div>
+            <!-- Clickable Green Button Linking to about.html -->
+            <a href="about.html" class="architect-badge">Chief Architect: Kishan Babu</a>
         </header>
 
         <section>
@@ -168,4 +173,3 @@
 
 </body>
 </html>
-    
